@@ -1,0 +1,5 @@
+{
+  "name": "blackbird-codespace",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "python -m pip install -U pip wheel setuptools && pip install 'spacy<3.9' 'thinc<8.3' 'preshed<3.1' 'cymem<2.1' 'murmurhash<1.1' 'srsly<2.5' 'catalogue<2.1' && python -m spacy download en_core_web_sm && (test -f requirements.txt && pip install -r requirements.txt || true)"
+}
